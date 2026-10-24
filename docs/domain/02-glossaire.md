@@ -21,7 +21,8 @@ Le terme du code (anglais) est **imposé**. Si un nouveau concept apparaît, on 
 | Contre-passation | `reversal` | Ledger / Payments | Écriture de sens opposé qui annule une écriture précédente sans la supprimer |
 | Relevé | `Statement` | Ledger | Liste chronologique des mouvements d'un compte, avec solde progressif |
 | Montant | `Money` | Shared | Montant en unités mineures (centimes) avec sa devise |
-| Devise | `Currency` | Shared | Code ISO 4217 (v1 : `EUR` uniquement) |
+| Devise | `Currency` | Shared | Code ISO 4217 d'une devise connue du système (ex. `EUR`, `USD`). Ne dit rien des devises acceptées par la banque |
+| Devise acceptée | — | Accounts | Devise dans laquelle la banque ouvre des comptes. v1 : `EUR` uniquement (RG-ACC-03) |
 | Virement | `Transfer` | Payments | Ordre de déplacer un montant d'un compte source vers un compte destinataire |
 | Compte source / destinataire | `source` / `destination` | Payments | Compte débité / compte crédité par un virement |
 | Libellé | `label` | Payments | Texte libre visible sur les relevés |

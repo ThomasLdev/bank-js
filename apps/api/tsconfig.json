@@ -18,6 +18,12 @@
     "skipLibCheck": true,
     "strict": true,
     "strictPropertyInitialization": false,
-    "types": ["vitest/globals", "node"]
+    "types": ["vitest/globals", "node"],
+    "paths": {
+      "@shared/*": ["./src/shared/*"],
+      "@accounts/*": ["./src/contexts/accounts/*"],
+      "@ledger/*": ["./src/contexts/ledger/*"],
+      "@payments/*": ["./src/contexts/payments/*"]
+    }
   }
 }
