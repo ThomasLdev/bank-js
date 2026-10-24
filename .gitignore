@@ -1,1 +1,26 @@
+# IDE
 .idea
+
+# Dependencies
+node_modules/
+
+# Builds
+dist/
+.next/
+out/
+*.tsbuildinfo
+
+# Turborepo
+.turbo/
+
+# Tests
+coverage/
+
+# Env (only .env.example files are committed)
+.env
+.env.*
+!.env.example
+
+# Misc
+.DS_Store
+*.log

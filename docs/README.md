@@ -18,6 +18,6 @@ Projet d'apprentissage : pivot d'une stack Symfony / API Platform / Twig vers un
 
 ## Conventions de la doc
 
-- Langue : français pour la doc et le métier ; **anglais pour le code** (noms de classes, commandes, événements). Le glossaire fait la correspondance.
+- Langue : français pour la doc ; **anglais pour tout le reste** (code, commentaires, fichiers de config, messages de commit). Le glossaire fait la correspondance des termes métier.
 - Toute décision structurante = un ADR.
 - Les règles métier ont un identifiant (`RG-XXX-NN`) à référencer dans les noms ou descriptions de tests.

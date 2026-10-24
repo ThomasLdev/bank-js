@@ -18,6 +18,8 @@ Le projet n'est pas un produit : c'est un **terrain d'entraînement**. On privil
 | Frontend | Next.js (App Router), RSC d'abord | Twig + Symfony UX | [0005](adr/0005-front-nextjs-rsc-first.md) |
 | Validation | Zod | Validator | — |
 | Tests | Vitest, Testcontainers, Supertest | PHPUnit, Foundry | — |
+| Lint & format | Biome (les deux apps), dependency-cruiser (règles hexa) | PHPStan, PHP-CS-Fixer, Deptrac | — |
+| Modules | ESM | — | — |
 
 ## Ce qu'on veut apprendre (par ordre de priorité)
 

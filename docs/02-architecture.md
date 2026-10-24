@@ -55,11 +55,11 @@ contexts/<context>/
 | Couche | Peut importer | Ne peut PAS importer |
 |---|---|---|
 | `domain` | `shared/domain` | `@nestjs/*`, `@prisma/*`, `application`, `infrastructure` |
-| `application` | `domain`, `shared/domain` | `@prisma/*`, `infrastructure`. `@nestjs/common` est toléré pour `@Injectable` et `@Inject` uniquement |
+| `application` | `domain`, `shared/domain` | `@prisma/*`, `infrastructure`. Seuls `@nestjs/common` (`@Injectable`, `@Inject`) et `@nestjs/cqrs` (handlers) sont tolérés |
 | `infrastructure` | tout | — |
 
 - Un contexte n'importe **jamais** le `domain` d'un autre contexte. Il passe par son `index.ts` (façade applicative) ou par un port défini chez lui et implémenté en infrastructure.
-- Ces règles sont **vérifiées automatiquement** par `eslint-plugin-boundaries` ou `dependency-cruiser`, intégré à la CI dès la phase 0.
+- Ces règles sont **vérifiées automatiquement** par `dependency-cruiser` (`apps/api/.dependency-cruiser.cjs`), lancé par `pnpm lint:archi` et inclus dans `lint`, donc dans la CI. Les cycles d'imports sont aussi interdits.
 
 ### Où sont les ports ?
 
