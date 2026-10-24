@@ -1,5 +1,5 @@
-import {Currency} from "@shared/domain/currency.js";
-import {MoneyError} from "@shared/domain/error/money.error.js";
+import { Currency } from "@shared/domain/currency.js";
+import { MoneyError } from "@shared/domain/error/money.error.js";
 
 export class Money {
   private constructor(
@@ -16,10 +16,7 @@ export class Money {
       throw MoneyError.currencyMismatch();
     }
 
-    return new Money(
-        this.amountMinor + other.amountMinor,
-        this.currency,
-    )
+    return new Money(this.amountMinor + other.amountMinor, this.currency);
   }
 
   subtract(other: Money): Money {
@@ -27,14 +24,13 @@ export class Money {
       throw MoneyError.currencyMismatch();
     }
 
-    return new Money(
-        this.amountMinor - other.amountMinor,
-        this.currency,
-    )
+    return new Money(this.amountMinor - other.amountMinor, this.currency);
   }
 
   equals(other: Money): boolean {
-    return this.amountMinor === other.amountMinor && this.currency === other.currency;
+    return (
+      this.amountMinor === other.amountMinor && this.currency === other.currency
+    );
   }
 
   isNegative(): boolean {

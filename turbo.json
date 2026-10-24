@@ -21,6 +21,9 @@
       "dependsOn": ["^build", "generate"]
     },
     "lint": {},
+    "lint:fix": {
+      "cache": false
+    },
     "test": {
       "dependsOn": ["generate"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"]

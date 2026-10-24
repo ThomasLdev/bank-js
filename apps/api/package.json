@@ -17,6 +17,7 @@
     "start:prod": "node dist/main",
     "lint": "biome check && pnpm lint:archi",
     "lint:archi": "depcruise src",
+    "lint:fix": "biome check --write",
     "typecheck": "tsc --noEmit",
     "generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
