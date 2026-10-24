@@ -61,6 +61,14 @@ contexts/<context>/
 - Un contexte n'importe **jamais** le `domain` d'un autre contexte. Il passe par son `index.ts` (façade applicative) ou par un port défini chez lui et implémenté en infrastructure.
 - Ces règles sont **vérifiées automatiquement** par `dependency-cruiser` (`apps/api/.dependency-cruiser.cjs`), lancé par `pnpm lint:archi` et inclus dans `lint`, donc dans la CI. Les cycles d'imports sont aussi interdits.
 
+### Imports et alias
+
+- Alias déclarés dans `apps/api/tsconfig.json` : `@shared/*`, `@accounts/*`, `@ledger/*`, `@payments/*`.
+- L'extension `.js` reste obligatoire : `import { Money } from "@shared/domain/money.js"`.
+- Dans un même dossier, l'import relatif (`./currency.js`) reste le plus lisible.
+- Les alias ne contournent pas les règles de dépendance : dependency-cruiser les résout.
+- Ajouter un contexte = ajouter son alias dans `tsconfig.json`.
+
 ### Où sont les ports ?
 
 - **Ports de repository** : dans `domain/` (ils parlent le langage du domaine).

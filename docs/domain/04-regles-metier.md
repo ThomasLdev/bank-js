@@ -10,7 +10,7 @@ Les plafonds chiffrés sont des valeurs v1, à placer en configuration.
 |---|---|
 | RG-ACC-01 | Un titulaire a un nom et un email valides. L'email est unique dans la banque. |
 | RG-ACC-02 | Un compte appartient à un et un seul titulaire. Un titulaire peut avoir plusieurs comptes. |
-| RG-ACC-03 | La devise d'un compte est fixée à l'ouverture et immuable (v1 : `EUR`). |
+| RG-ACC-03 | La devise d'un compte est fixée à l'ouverture et immuable. La banque n'ouvre des comptes que dans une devise acceptée (v1 : `EUR` uniquement). |
 | RG-ACC-04 | Un compte reçoit à l'ouverture un numéro de compte unique et le statut `ACTIVE`. |
 | RG-ACC-05 | Le découvert autorisé est compris entre 0 et 2 000 €. Valeur par défaut : 0. Seul un conseiller peut le modifier. |
 | RG-ACC-06 | On ne peut pas baisser le découvert sous le niveau du solde négatif actuel. Exemple : solde −300 €, nouveau découvert 200 € → refusé. |
